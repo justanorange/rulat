@@ -9,7 +9,7 @@ interface TextInputProps {
   setText: (text: string) => void;
 }
 
-export const TextInput = ({ text, setText }: TextInputProps) => {
+export const TextInput = ({ setText }: TextInputProps) => {
   const {
     isListening,
     interimTranscript,

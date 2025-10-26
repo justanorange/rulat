@@ -78,7 +78,7 @@ firstLetters.forEach((latin, cyrillic) => {
 export const toLatin = (text: string): string => {
   let result = text;
 
-  result = result.replace(/(^|\s)(\p{L})/gu, (match, p1, p2) => {
+  result = result.replace(/(^|\s)(\p{L})/gu, (_, p1, p2) => {
     const letter = firstLetters.get(p2) || p2
     return p1 + letter
   })
